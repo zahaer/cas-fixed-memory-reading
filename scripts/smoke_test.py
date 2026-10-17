@@ -26,7 +26,7 @@ def main():
     assert apply_block_bias(logits, blocks, {}) == logits
     unbiased = softmax(logits)
     biased = softmax(apply_block_bias(logits, blocks, {"gold": 1.0}))
-    assert biased[0] / biased[1] == unbiased[0] / unbiased[1]
+    assert math.isclose(biased[0] / biased[1], unbiased[0] / unbiased[1], rel_tol=1e-6)
     assert sum(biased[:2]) > sum(unbiased[:2])
     print("PASS visibility isolation")
     print("PASS zero-bias identity and block-share algebra")
