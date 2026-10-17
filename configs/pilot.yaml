@@ -1,0 +1,11 @@
+# Engineering pilot only; not the CAS paper's full protocol.
+seed: 42
+model_path: /nvme1n1/LLM/Qwen3-4B
+python: /home/ruoyuzhao/miniconda3/envs/slime/bin/python
+gpu: 7
+documents: 4
+questions_per_document: 20
+distractors: [0, 1, 3]
+methods: [isolation, joint, retrieval_top_k, length_normalization]
+full_cas_reproduction: false
+data_snapshot: TODO

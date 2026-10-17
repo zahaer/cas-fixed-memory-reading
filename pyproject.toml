@@ -1,0 +1,9 @@
+[project]
+name = "cas-fixed-memory-reading"
+version = "0.1.0"
+requires-python = ">=3.10"
+description = "Auditable pilot for fixed-memory reading interventions over CAS-style cartridges"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
